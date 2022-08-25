@@ -31,7 +31,7 @@ def main():
             user = UserService()
             id = input('ID 입력>>>')
             pw = input('PW 입력>>>')
-            user.user(id,pw)
+            user.login(id,pw)
 
     
 if __name__ == '__main__':
