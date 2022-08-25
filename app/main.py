@@ -20,6 +20,7 @@ def main():
         if menu == '0':
             print('전체프로그램을 종료합니다')
             break
+        
         elif menu == '1':
             calcservice = CaculatorService()
             first = int(input('첫번째 값>>>'))
