@@ -72,7 +72,7 @@ class PandasQuiz(object):
         ic(self.id())
         ic(self.score())
         df4 = pd.DataFrame.from_dict({self.id():self.score()}, orient='index', columns=['국어', '영어', '수학', '사회'])
-        for i in range(1,10):
+        for i in range(8):
             df4 = pd.concat([df4,pd.DataFrame.from_dict({self.id():self.score()}, orient='index', columns=['국어', '영어', '수학', '사회'])],axis=0)
         
         ic(df4)
