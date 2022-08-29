@@ -81,7 +81,7 @@ class PandasQuiz(object):
     def id(self):
         rand_str = ''
         for i in range(5):
-            rand_str += str(random.choice(string.ascii_letters))
+            rand_str += random.choice(string.ascii_letters)
         return rand_str
     
     def score(self):

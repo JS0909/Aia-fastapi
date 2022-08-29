@@ -52,18 +52,24 @@ def main():
             
         elif menu == '4':
             quiz = PandasQuiz()
-        while 1:
-            quiz_number = input('퀴즈번호 선택. 종료는 0 : ')
-            if quiz_number == '0':
-                break
-            elif quiz_number == '1':
-                quiz.quiz_01()
-            elif quiz_number == '2':
-                quiz.quiz_02()
-            elif quiz_number == '3':
-                quiz.quiz_03()
-            elif quiz_number == '4':
-                quiz.quiz_04()
+            while 1:
+                quiz_number = input('퀴즈번호 선택. 종료는 0 : ')
+                if quiz_number == '0':
+                    break
+                elif quiz_number == '1':
+                    quiz.quiz_01()
+                elif quiz_number == '2':
+                    quiz.quiz_02()
+                elif quiz_number == '3':
+                    quiz.quiz_03()
+                elif quiz_number == '4':
+                    quiz.quiz_04()
+                else:
+                    print('번호 선택 오류! 다른 번호 눌러주세요 ><')
+                
+                
+        else:
+                print('번호 선택 오류! 다른 번호 눌러주세요 ><')
         
 if __name__ == '__main__':
     main()
