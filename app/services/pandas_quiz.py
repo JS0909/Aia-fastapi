@@ -9,6 +9,7 @@ ic| df1:    a  b  c
          2  2  4  6
 '''
 import pandas as pd
+import numpy as np
 from icecream import ic
 import random
 import string
@@ -64,6 +65,7 @@ class PandasQuiz(object):
                    PZOTP  94  78  79  96
                    GOJKU  62  17  75  49
         '''   
+    
     def quiz_04(self):
         ic(self.get_id())
         ic(self.get_score())
@@ -105,7 +107,7 @@ class PandasQuiz(object):
         lDZid  57  90  55  24
     '''
     def quiz_06(self):
-        ic(self.get_df().iloc[[0]])
+        print(self.get_df().iloc[[0]])
         
         
     '''

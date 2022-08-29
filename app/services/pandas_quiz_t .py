@@ -76,4 +76,4 @@ class PandasQuizCopy(object):
         return ["".join([random.choice(string.ascii_letters) for i in range(5)]) for i in range(10)]
         
     def get_score(self):
-        return np.random.randint(0,100,(10, 4))
+        return np.random.randint(0,101,(10, 4))

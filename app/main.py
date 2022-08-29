@@ -3,7 +3,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 basedir = os.path.dirname(os.path.abspath(__file__))
 
-from app.services.calculator import CaculatorService
+from app.services.calculator import CalculatorService
 from app.services.user import UserService
 from app.services.score import ScoreService
 from app.services.grade import GradeService
@@ -27,7 +27,7 @@ def main():
             break
         
         elif menu == '1':
-            calcservice = CaculatorService()
+            calcservice = CalculatorService()
             first = int(input('첫번째 값>>>'))
             second = int(input('두번째 값>>>'))
             calcservice.calculate(first, second)
