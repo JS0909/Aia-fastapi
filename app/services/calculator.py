@@ -1,11 +1,11 @@
-from app.models.calculator import Caculator
+from app.models.calculator import Calculator
 
-class CaculatorService(object):
+class CalculatorService(object):
     def __init__(self)->None: 
         pass
 
     def calculate(self, first, second):
-        calc =  Caculator(first, second)
+        calc =  Calculator(first, second)
         print(f'첫번째수: {calc.first}')
         print(f'첫번째수: {calc.second}')
         print(f'{calc.first} + {calc.second} = {calc.sum()}')
