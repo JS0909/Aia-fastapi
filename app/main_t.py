@@ -2,8 +2,9 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 basedir = os.path.dirname(os.path.abspath(__file__))
+
 from app.api.endpoints.url import Url
-from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, \
+from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, DDARUNG, TITANIC,\
     QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7
 
 def print_menu():
@@ -12,6 +13,8 @@ def print_menu():
     print(f'로그아웃 : {LOGOUT}')
     print(f'계산기 : {CALCULATOR}')
     print(f'성적표 : {GRADE}') 
+    print(f'따릉이 : {DDARUNG}')
+    print(f'타이타닉 : {TITANIC}') 
     print(f'퀴즈 1 : {QUIZ_1}') 
     print(f'퀴즈 2 : {QUIZ_2}')
     print(f'퀴즈 3 : {QUIZ_3}')

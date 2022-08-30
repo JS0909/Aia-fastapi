@@ -2,7 +2,10 @@ from app.services.calculator import CalculatorService
 from app.services.user import UserService
 from app.services.grade import GradeService
 from app.services.pandas_quiz import PandasQuiz
-from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, \
+from app.services.titanic import TitanicService
+from app.services.ddarung import DDarungService
+
+from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, DDARUNG, TITANIC,\
     QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7
 class Url:
     
@@ -22,6 +25,16 @@ class Url:
             math = int(input('수학'))
             print(f'이름: {name} \
                 학점: {GradeService().get_grade(name,korean, english, math)}')
+            
+        elif menu == DDARUNG: DDarungService().submit(
+            path='data/ddarung/', train='train.csv', test='test.csv'
+        )
+        
+        elif menu == TITANIC:
+            titanicService = TitanicService()
+            titanicService.submit(
+            path='data/titanic/',train='train.csv', test='test.csv')
+            
         elif menu == QUIZ_1: PandasQuiz().quiz_01()
         elif menu == QUIZ_2: PandasQuiz().quiz_02()
         elif menu == QUIZ_3: PandasQuiz().quiz_03()
@@ -29,4 +42,4 @@ class Url:
         elif menu == QUIZ_5: PandasQuiz().quiz_05()
         elif menu == QUIZ_6: PandasQuiz().quiz_06()
         elif menu == QUIZ_7: PandasQuiz().quiz_07()
-            
+       
