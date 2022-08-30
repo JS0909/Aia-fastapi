@@ -129,8 +129,6 @@ class PandasQuiz(object):
         df = self.get_df()
         df['과학'] = random.sample(range(0, 101), 10)
         df['총점'] = df.sum(axis=1)
-        tmpdf = pd.DataFrame.from_dict({'과목총점':df.sum(axis=0)}, orient='index', columns=['국어', '영어', '수학', '사회', '과학', '총점'])
-        df = pd.concat([df, tmpdf], axis=0)
-    
+        df.loc['과목총점'] = df.sum(axis=0)
         ic(df)
         
